@@ -23,3 +23,11 @@ reserva.CadastrarHospedes(hospedes);
 // Exibe a quantidade de hóspedes e o valor da diária
 Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
 Console.WriteLine($"Valor diária: {reserva.CalcularValorDiaria()}");
+
+// Testa a reserva com mais de 10 dias para aplicar o desconto
+reserva = new Reserva(diasReservados: 12);
+reserva.CadastrarSuite(suite);
+reserva.CadastrarHospedes(hospedes);
+
+Console.WriteLine($"Hóspedes: {reserva.ObterQuantidadeHospedes()}");
+Console.WriteLine($"Valor diária com desconto: {reserva.CalcularValorDiaria()}");
